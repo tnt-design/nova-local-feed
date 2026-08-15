@@ -1,0 +1,63 @@
+name: Build local inventory feed
+
+# Google requires the local inventory feed to be refreshed at least once a day.
+# If it goes stale, the "Add inventory" step in Merchant Center reverts to
+# "Not started" and re-greys the "Request inventory verification" button.
+# Twice a day gives one spare run, because GitHub's scheduler can skip or
+# delay cron jobs under load.
+
+on:
+  schedule:
+    - cron: "0 18 * * *"   # 01:00 Asia/Bangkok
+    - cron: "0 6 * * *"    # 13:00 Asia/Bangkok
+  workflow_dispatch:        # lets you trigger a run by hand
+  push:
+    paths:
+      - "local_inventory_feed.py"
+      - ".github/workflows/build-feed.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-feed
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Generate feed
+        env:
+          WC_KEY: ${{ secrets.WC_KEY }}
+          WC_SECRET: ${{ secrets.WC_SECRET }}
+        # --min-rows aborts instead of publishing a short feed. A truncated
+        # feed is worse than a stale one: Google reads the missing rows as
+        # "no longer available in store". 350 sits below the current 414 with
+        # room for genuine catalogue shrinkage, but well above a partial read.
+        run: |
+          python local_inventory_feed.py \
+            --out docs/nova-local-inventory.txt \
+            --min-rows 350 \
+            --report
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- docs/nova-local-inventory.txt; then
+            echo "No stock changes — nothing to commit."
+          else
+            git add docs/nova-local-inventory.txt
+            git commit -m "Update local inventory feed ($(date -u +%Y-%m-%d))"
+            git push
+          fi
