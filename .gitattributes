@@ -1,0 +1,5 @@
+# The feed is a data file served verbatim to Google. Keep it LF everywhere so
+# a Windows checkout cannot introduce CRLF and change what gets published.
+docs/nova-local-inventory.txt text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
