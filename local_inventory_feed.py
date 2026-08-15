@@ -61,13 +61,13 @@ from collections import Counter
 
 import requests
 
+# nova_config.py is the local convenience path and is deliberately absent on a
+# cloud runner, where credentials arrive as environment variables instead.
+# Missing it is normal, not an error — only having neither source is.
 try:
     import nova_config as cfg
 except ImportError:
-    sys.exit(
-        "nova_config.py not found. On a cloud runner, set WC_KEY / WC_SECRET "
-        "as environment variables instead (see load_credentials)."
-    )
+    cfg = None
 
 
 # ─────────────────────────────────────────────────────────────
@@ -108,7 +108,10 @@ def load_credentials():
     key = os.environ.get("WC_KEY") or getattr(cfg, "WC_KEY", None)
     secret = os.environ.get("WC_SECRET") or getattr(cfg, "WC_SECRET", None)
     if not key or not secret:
-        sys.exit("Missing WC_KEY / WC_SECRET.")
+        sys.exit(
+            "Missing WC_KEY / WC_SECRET. Set them as environment variables, "
+            "or put them in a local nova_config.py next to this script."
+        )
     return (key, secret)
 
 
