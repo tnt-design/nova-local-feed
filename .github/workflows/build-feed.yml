@@ -38,8 +38,9 @@ jobs:
 
       - name: Generate feed
         env:
-          WC_KEY: ${{ secrets.WC_KEY }}
+          WC_KEY: ${{ secrets.WC_KEY }}            # WooCommerce: feed ids + SKUs
           WC_SECRET: ${{ secrets.WC_SECRET }}
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}  # Airtable: real stock counts
         # --min-rows aborts instead of publishing a short feed. A truncated
         # feed is worse than a stale one: Google reads the missing rows as
         # "no longer available in store". 350 sits below the current 414 with

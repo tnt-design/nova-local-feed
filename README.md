@@ -28,6 +28,16 @@ Google fetches it on its own schedule.
 Nothing here writes to the website. The WooCommerce credentials used are
 read-only.
 
+## Two sources, each for the thing it actually knows
+
+| Source | Supplies |
+|---|---|
+| WooCommerce | **which** items exist, and their feed ids |
+| Airtable | **how many** of each are really in the shop |
+
+Neither can do both, and using the wrong one for either half is how this goes
+wrong quietly.
+
 ## The id rule — the part that fails silently
 
 The `id` column must match the primary feed **exactly**, or the row is dropped
@@ -41,9 +51,33 @@ Verified against the live account on 2026-08-15:
 - simple products publish under their own id
 - external/affiliate products are not in the primary feed and are skipped
 
-Airtable is deliberately not the source. Its `🌐 Product ID (Website)` field is
-populated on only ~547 of 894 records and does not line up with what the plugin
-actually publishes. WooCommerce is the system of record for what is on the site.
+Airtable cannot supply these ids. Its `🌐 Product ID (Website)` field is
+populated on only ~547 of 894 records and holds *parent* product ids, so it
+matched only 80 of the 414 feed items.
+
+## The availability rule
+
+Availability comes from Airtable's **🎁 Total In Stock** rollup — the real count
+of pieces in the shop — joined to WooCommerce by SKU (414/414 match).
+
+It deliberately does *not* come from:
+
+- WooCommerce `stock_status` — the site does not manage stock at all
+  (`manage_stock` is `False` and `stock_quantity` is `None` on every item), so
+  that flag is hand-set and stale.
+- Airtable's `Stock Status` single-select — also hand-maintained, and it lags
+  real stock movement.
+
+Measured 2026-08-15, the difference is not cosmetic:
+
+| Source | In stock | Out of stock |
+|---|---|---|
+| hand-set flag | 409 | 5 |
+| real quantity | 377 | 37 |
+
+29 items flagged "In Stock" had a true quantity of zero. Google spot-checks
+in-store inventory as part of Free local listings, so overstating availability
+is the failure mode that matters most here.
 
 ## Running it by hand
 
@@ -51,8 +85,10 @@ actually publishes. WooCommerce is the system of record for what is on the site.
 python local_inventory_feed.py --report
 ```
 
-Credentials come from `WC_KEY` / `WC_SECRET` environment variables, or from a
-local `nova_config.py` (gitignored, and not present in this repo).
+Credentials come from `WC_KEY`, `WC_SECRET` and `AIRTABLE_TOKEN` environment
+variables, or from a local `nova_config.py` (gitignored, and not present in this
+repo — it lives in the WooCommerce Sync folder, so set the env vars instead when
+running from here).
 
 Useful flags:
 
