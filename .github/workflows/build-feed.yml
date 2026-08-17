@@ -1,26 +1,30 @@
 name: Build local inventory feed
 
-# Google requires the local inventory feed to be refreshed at least once a day.
-# If it goes stale, the "Add inventory" step in Merchant Center reverts to
-# "Not started" and re-greys the "Request inventory verification" button.
-# Twice a day gives one spare run, because GitHub's scheduler can skip or
-# delay cron jobs under load.
+# The DAILY job. Reads the committed product map plus Airtable stock levels.
+# It makes NO requests to nova-collection.com at all — see refresh-map.yml for
+# why. Runs in about 5 seconds.
+#
+# Google requires the feed to be refreshed at least once a day. If it goes
+# stale, the "Add inventory" step in Merchant Center reverts to "Not started"
+# and re-greys "Request inventory verification". Twice a day gives one spare
+# run, because GitHub's scheduler can skip or delay cron jobs under load.
 
 on:
   schedule:
     - cron: "0 18 * * *"   # 01:00 Asia/Bangkok
     - cron: "0 6 * * *"    # 13:00 Asia/Bangkok
-  workflow_dispatch:        # lets you trigger a run by hand
+  workflow_dispatch:
   push:
     paths:
       - "local_inventory_feed.py"
+      - "product_map.json"
       - ".github/workflows/build-feed.yml"
 
 permissions:
   contents: write
 
 concurrency:
-  group: build-feed
+  group: feed-writer          # shared with refresh-map.yml: both commit here
   cancel-in-progress: false
 
 jobs:
@@ -37,14 +41,15 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Generate feed
+        # Deliberately NO WooCommerce credentials here. The daily path must not
+        # be able to touch the website, so that stays true by construction
+        # rather than by intention.
         env:
-          WC_KEY: ${{ secrets.WC_KEY }}            # WooCommerce: feed ids + SKUs
-          WC_SECRET: ${{ secrets.WC_SECRET }}
-          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}  # Airtable: real stock counts
-        # --min-rows aborts instead of publishing a short feed. A truncated
-        # feed is worse than a stale one: Google reads the missing rows as
-        # "no longer available in store". 350 sits below the current 414 with
-        # room for genuine catalogue shrinkage, but well above a partial read.
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+        # --min-rows aborts instead of publishing a short feed. A truncated feed
+        # is worse than a stale one: Google reads the missing rows as "no longer
+        # available in store". 350 sits below the current 414 with room for
+        # genuine catalogue shrinkage, but well above a partial read.
         run: |
           python local_inventory_feed.py \
             --out docs/nova-local-inventory.txt \
@@ -60,5 +65,6 @@ jobs:
           else
             git add docs/nova-local-inventory.txt
             git commit -m "Update local inventory feed ($(date -u +%Y-%m-%d))"
+            git pull --rebase --autostash origin main
             git push
           fi

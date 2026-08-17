@@ -21,12 +21,46 @@ feature request. Free local listings needs both.
 
 ## How it works
 
-A GitHub Actions cron runs twice daily, reads WooCommerce over the REST API,
-and writes `docs/nova-local-inventory.txt`. GitHub Pages serves that folder.
-Google fetches it on its own schedule.
+Two scheduled jobs, split by how often the underlying data actually changes:
 
-Nothing here writes to the website. The WooCommerce credentials used are
-read-only.
+| Job | When | Reads | Touches the website? |
+|---|---|---|---|
+| `build-feed.yml` | twice daily, 01:00 + 13:00 ICT | cached map + Airtable | **no** |
+| `refresh-map.yml` | weekly, Mon 00:00 ICT | WooCommerce | yes, paced |
+
+GitHub Pages serves `docs/`. Google fetches the file at 03:00 ICT daily.
+
+Nothing here writes to the website. All credentials are read-only.
+
+### Why the map is cached
+
+Building the id list costs about one request per variable product — roughly 330
+per run. Run twice daily from a GitHub datacenter IP, that reads as scraping,
+and on 2026-08-16 SiteGround's bot protection started answering with an HTTP 202
+`sgcaptcha` challenge page instead of API data:
+
+```
+HTTP 202: <meta http-equiv="refresh" content="0;/.well-known/sgcaptcha/…">
+```
+
+That is the site defending itself, working as intended. The fix is to stop
+generating the load, not to defeat the check.
+
+*Which* SKUs exist changes rarely; *how many* are in stock changes daily. So the
+expensive crawl runs weekly into `product_map.json`, and the daily job reads that
+plus Airtable — about 5 seconds, and zero requests to nova-collection.com. The
+daily workflow is not even given the WooCommerce secrets, so that stays true by
+construction rather than by intention.
+
+If a weekly refresh is ever blocked, the script falls back to the committed map
+and still publishes a correct feed. A slightly stale id list beats a stale feed,
+which is what reverts Merchant Center's "Add inventory" step.
+
+To rebuild the map by hand from a trusted network:
+
+```bash
+python local_inventory_feed.py --refresh-map
+```
 
 ## Two sources, each for the thing it actually knows
 

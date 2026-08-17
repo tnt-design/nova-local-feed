@@ -13,16 +13,39 @@ Merchant Center must fetch this file AT LEAST ONCE PER DAY. A manual upload
 does not hold: the "Add inventory" step in
   Marketing methods > Free local listings > Thailand > Review setup status
 reverts to "Not started" once the data goes stale, which re-greys the
-"Request inventory verification" button. That is why this is a scheduled job
-and not a one-off export.
+"Request inventory verification" button. That is why this is a scheduled job.
 
 TWO SOURCES, EACH FOR THE THING IT ACTUALLY KNOWS
 -------------------------------------------------
   * WooCommerce  -> WHICH items exist and what their feed ids are.
   * Airtable     -> HOW MANY of each are actually in the shop.
 
-Neither one can do both, and using the wrong one for either half is how this
-goes wrong quietly.
+Neither can do both, and using the wrong one for either half is how this goes
+wrong quietly.
+
+WHY THE PRODUCT MAP IS CACHED (added 2026-08-17)
+------------------------------------------------
+Building the id list requires one request per variable product — about 330
+requests per run. Run twice daily from a GitHub Actions datacenter IP, that
+looks like scraping, and on 2026-08-16 SiteGround's bot protection started
+answering with an HTTP 202 CAPTCHA challenge page instead of the API:
+
+    HTTP 202: <meta http-equiv="refresh" content="0;/.well-known/sgcaptcha/…">
+
+That is the site defending itself and it is working as intended. The answer is
+to stop generating the load, not to defeat the check.
+
+So the id -> SKU map now lives in product_map.json, committed to the repo:
+
+  * DAILY run   reads the cached map and Airtable only. It makes ZERO requests
+                to nova-collection.com. Stock levels change daily; which SKUs
+                exist barely changes, so this is also the more honest split.
+  * WEEKLY run  refreshes the map from WooCommerce, paced with a delay between
+                requests, and commits the result.
+
+If a refresh is ever blocked, the run falls back to the committed map and still
+publishes a correct feed rather than failing. A stale-by-a-few-days id list is
+vastly better than no feed at all.
 
 THE ID RULE (this is the part that fails silently)
 --------------------------------------------------
@@ -42,12 +65,12 @@ Verified against the live account on 2026-08-15:
 
 Airtable cannot supply these ids. Its "🌐 Product ID (Website)" field is
 populated on only ~547 of 894 records and holds PARENT product ids, so it
-matched just 80 of the 414 feed items. WooCommerce is the only source for ids.
+matched just 80 of the 414 feed items.
 
 THE AVAILABILITY RULE
 ---------------------
-Availability comes from Airtable's "🎁 Total In Stock" rollup — the real
-count of pieces in the shop — joined to WooCommerce by SKU.
+Availability comes from Airtable's "🎁 Total In Stock" rollup — the real count
+of pieces in the shop — joined to WooCommerce by SKU.
 
 It deliberately does NOT come from:
   * WooCommerce `stock_status` — the site does not manage stock at all
@@ -56,33 +79,34 @@ It deliberately does NOT come from:
   * Airtable's "Stock Status" single-select — also hand-maintained, and it
     lags real stock movement.
 
-Measured on 2026-08-15, the difference is not cosmetic:
+Measured on 2026-08-15:
     by hand-set flag   409 in stock /  5 out of stock
     by real quantity   377 in stock / 37 out of stock
-29 items flagged "In Stock" had a true quantity of zero. Google physically
-verifies in-store inventory as part of Free local listings, so overstating
-availability is the failure mode that matters most here.
+29 items flagged "In Stock" had a true quantity of zero. Google spot-checks
+in-store inventory, so overstating availability is the failure that matters.
 
 CREDENTIALS
 -----------
 All read-only:
-  WC_KEY / WC_SECRET   WooCommerce REST (ids + SKUs)
-  AIRTABLE_TOKEN       Airtable (stock quantities)
+  AIRTABLE_TOKEN       Airtable (stock quantities) — needed every run
+  WC_KEY / WC_SECRET   WooCommerce REST — only needed for --refresh-map
 No WordPress app password. Nothing here writes to the website or to Airtable.
 
 USAGE
 -----
-    py local_inventory_feed.py                 # write the feed
-    py local_inventory_feed.py --report        # write it + print an audit
-    py local_inventory_feed.py --compare FILE  # diff against an older feed
-    py local_inventory_feed.py --min-rows 350  # refuse to write a short feed
+    py local_inventory_feed.py                  # daily: cached map + Airtable
+    py local_inventory_feed.py --refresh-map    # weekly: re-read WooCommerce
+    py local_inventory_feed.py --report         # add an audit summary
+    py local_inventory_feed.py --compare FILE   # diff against an older feed
 """
 
 import argparse
+import json
 import os
 import sys
 import time
 from collections import Counter
+from datetime import datetime, timezone
 
 import requests
 
@@ -104,7 +128,6 @@ API = f"{WC_URL}/wp-json/wc/v3"
 
 # The store code as declared in Google Business Profile > advanced settings.
 # MUST match GBP byte-for-byte, including spaces and capitalisation.
-# Proven working in the 2026-08-01 upload.
 STORE_CODE = "Nova Collection Thapae"
 
 # The prefix the Google for WooCommerce plugin puts on every item id.
@@ -120,29 +143,52 @@ AT_FIELD_QTY = "fldXtKfE51caGtml6"   # 🎁 Total In Stock  (rollup)
 IN_STOCK = "in stock"
 OUT_OF_STOCK = "out of stock"
 
-DEFAULT_OUT = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "nova-local-inventory.txt"
-)
+_HERE = os.path.dirname(os.path.abspath(__file__))
+DEFAULT_OUT = os.path.join(_HERE, "nova-local-inventory.txt")
+DEFAULT_MAP = os.path.join(_HERE, "product_map.json")
 
 PER_PAGE = 100
 TIMEOUT = 90
 
+# Politeness delay between variation requests during a map refresh. The refresh
+# is weekly and unattended, so spending an extra couple of minutes to stay well
+# under the host's bot threshold costs nothing that matters.
+REFRESH_DELAY = 0.3
 
-def load_credentials():
+
+def load_credentials(need_wc):
     """Env vars win, so the same file runs locally and on a cloud runner."""
     def pick(name):
         return os.environ.get(name) or getattr(cfg, name, None)
 
-    key, secret, token = pick("WC_KEY"), pick("WC_SECRET"), pick("AIRTABLE_TOKEN")
-    missing = [n for n, v in
-               (("WC_KEY", key), ("WC_SECRET", secret), ("AIRTABLE_TOKEN", token))
-               if not v]
+    token = pick("AIRTABLE_TOKEN")
+    required = {"AIRTABLE_TOKEN": token}
+    wc_auth = None
+    if need_wc:
+        key, secret = pick("WC_KEY"), pick("WC_SECRET")
+        required.update({"WC_KEY": key, "WC_SECRET": secret})
+        wc_auth = (key, secret)
+
+    missing = [n for n, v in required.items() if not v]
     if missing:
         sys.exit(
             f"Missing {', '.join(missing)}. Set them as environment variables, "
             f"or put them in a local nova_config.py next to this script."
         )
-    return (key, secret), token
+    return wc_auth, token
+
+
+class BotChallenge(RuntimeError):
+    """The host answered with a bot-protection challenge instead of data."""
+
+
+def _looks_like_bot_challenge(response):
+    """SiteGround answers a suspected bot with HTTP 202 and an sgcaptcha
+    redirect page. Detect it explicitly: retrying against a bot blocker only
+    digs the hole deeper, and the caller can fall back to the cached map."""
+    if "sgcaptcha" in response.text[:2000]:
+        return True
+    return response.status_code == 202 and "<meta http-equiv" in response.text[:2000]
 
 
 # ─────────────────────────────────────────────────────────────
@@ -151,14 +197,20 @@ def load_credentials():
 
 def _get(session, url, headers=None, **params):
     """GET with a few retries — this runs unattended, so a blip must not
-    produce a truncated feed. A short feed is worse than no feed: Google
-    reads missing rows as 'no longer in store'."""
+    produce a truncated feed. A short feed is worse than no feed: Google reads
+    missing rows as 'no longer in store'."""
     last = None
     for attempt in range(4):
         try:
             r = session.get(url, params=params, headers=headers, timeout=TIMEOUT)
             if r.status_code == 200:
                 return r
+            if _looks_like_bot_challenge(r):
+                raise BotChallenge(
+                    "nova-collection.com answered with a SiteGround bot-protection "
+                    "challenge (sgcaptcha) instead of API data. The runner's IP is "
+                    "being treated as a scraper."
+                )
             last = f"HTTP {r.status_code}: {r.text[:200]}"
         except requests.RequestException as exc:
             last = str(exc)
@@ -181,12 +233,14 @@ def _wc_pages(session, url, **params):
     return out
 
 
-def fetch_feed_items(session, verbose=True):
-    """Every item the primary feed contains, as (id, sku, kind).
+def refresh_product_map(wc_auth, verbose=True):
+    """Crawl WooCommerce for every item the primary feed contains.
 
-    One row per published VARIATION for variable products, one per published
-    SIMPLE product, and nothing for external products.
+    Expensive — roughly one request per variable product. Weekly only.
     """
+    session = requests.Session()
+    session.auth = wc_auth
+
     products = _wc_pages(session, f"{API}/products", status="publish")
     if verbose:
         print(f"  published parent-level products: {len(products)}")
@@ -210,8 +264,28 @@ def fetch_feed_items(session, verbose=True):
                            status="publish"):
             items.append({"id": v["id"], "sku": v.get("sku") or "",
                           "kind": "variation"})
+        time.sleep(REFRESH_DELAY)
 
     return items, skipped
+
+
+def save_product_map(items, path):
+    payload = {
+        "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "count": len(items),
+        "items": sorted(items, key=lambda x: x["id"]),
+    }
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(payload, f, indent=1, ensure_ascii=False)
+        f.write("\n")
+    os.replace(tmp, path)
+
+
+def load_product_map(path):
+    with open(path, encoding="utf-8") as f:
+        payload = json.load(f)
+    return payload["items"], payload.get("generated", "unknown")
 
 
 def fetch_stock_by_sku(token, verbose=True):
@@ -241,8 +315,7 @@ def fetch_stock_by_sku(token, verbose=True):
         if not offset:
             break
     if verbose:
-        print(f"  Airtable SKUs with stock figures: {len(by_sku)} "
-              f"({pages} pages)")
+        print(f"  Airtable SKUs with stock figures: {len(by_sku)} ({pages} pages)")
     return by_sku
 
 
@@ -301,13 +374,17 @@ def write_feed(rows, path):
 def main():
     ap = argparse.ArgumentParser(description="Build Nova's Google local inventory feed.")
     ap.add_argument("--out", default=DEFAULT_OUT, help="output path")
+    ap.add_argument("--map", dest="map_path", default=DEFAULT_MAP,
+                    help="path to the cached id -> SKU map")
+    ap.add_argument("--refresh-map", action="store_true",
+                    help="re-read WooCommerce and rewrite the map (weekly job)")
     ap.add_argument("--report", action="store_true", help="print an audit summary")
     ap.add_argument("--compare", metavar="FILE", help="diff against an existing feed")
     ap.add_argument(
         "--min-rows", type=int, default=0, metavar="N",
-        help="abort without writing if fewer than N rows were built. Use this "
-             "in scheduled runs: a partial fetch that silently writes a short "
-             "feed tells Google the missing products are no longer in store.",
+        help="abort without writing if fewer than N rows were built. A partial "
+             "read that silently writes a short feed tells Google the missing "
+             "products are no longer in store.",
     )
     ap.add_argument(
         "--max-unmatched", type=int, default=25, metavar="N",
@@ -317,12 +394,35 @@ def main():
     )
     args = ap.parse_args()
 
-    wc_auth, at_token = load_credentials()
-    wc = requests.Session()
-    wc.auth = wc_auth
+    wc_auth, at_token = load_credentials(need_wc=args.refresh_map)
 
-    print("Reading WooCommerce (feed ids)…")
-    items, skipped = fetch_feed_items(wc)
+    items = None
+    if args.refresh_map:
+        print("Refreshing product map from WooCommerce…")
+        try:
+            items, skipped = refresh_product_map(wc_auth)
+            save_product_map(items, args.map_path)
+            print(f"  wrote {len(items)} items to {args.map_path}")
+            for k, v in skipped.items():
+                print(f"  skipped {k}: {v}")
+        except BotChallenge as exc:
+            # Falling back is the right call: the feed content depends on stock,
+            # which comes from Airtable. A slightly stale id list still produces
+            # a correct, fresh feed. Failing here would let the feed go stale
+            # and revert Merchant Center's "Add inventory" step.
+            print(f"  ⚠ {exc}")
+            print("  Falling back to the committed product map.")
+            items = None
+
+    if items is None:
+        if not os.path.exists(args.map_path):
+            sys.exit(
+                f"No product map at {args.map_path} and no usable refresh. "
+                f"Run once with --refresh-map from a trusted network."
+            )
+        items, generated = load_product_map(args.map_path)
+        print(f"Using cached product map: {len(items)} items (generated {generated})")
+
     print("Reading Airtable (real stock)…")
     stock_by_sku = fetch_stock_by_sku(at_token)
 
@@ -355,8 +455,6 @@ def main():
     if unmatched:
         print(f"  ⚠ {len(unmatched)} SKUs had no Airtable stock row "
               f"(listed out of stock): {unmatched[:10]}")
-    for k, v in skipped.items():
-        print(f"  skipped {k}: {v}")
 
     if args.report:
         print("\nBreakdown:")

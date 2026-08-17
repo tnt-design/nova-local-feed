@@ -1,0 +1,72 @@
+name: Refresh product map
+
+# The WEEKLY job. Re-reads WooCommerce to rebuild the id -> SKU map, then
+# writes the feed from it.
+#
+# WHY THIS IS SEPARATE AND WHY IT IS WEEKLY
+# -----------------------------------------
+# Building the id list costs roughly one request per variable product — about
+# 330 requests. Run twice daily from a GitHub datacenter IP, that reads as
+# scraping. On 2026-08-16 SiteGround's bot protection began answering with an
+# HTTP 202 sgcaptcha challenge page instead of API data, and the run failed.
+#
+# That is the site defending itself, working as intended. The fix is to stop
+# generating the load, not to defeat the check. Which SKUs exist changes rarely;
+# how many are in stock changes daily. Splitting them along that line means the
+# expensive crawl happens weekly and the daily job never touches the site.
+#
+# The crawl is also paced (REFRESH_DELAY in the script) to stay well under the
+# host's threshold.
+#
+# If the refresh is blocked anyway, the script falls back to the committed map
+# and still publishes a correct feed rather than failing.
+
+on:
+  schedule:
+    - cron: "0 17 * * 0"   # Monday 00:00 Asia/Bangkok, before the 01:00 build
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feed-writer          # shared with build-feed.yml: both commit here
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Refresh map and rebuild feed
+        env:
+          WC_KEY: ${{ secrets.WC_KEY }}
+          WC_SECRET: ${{ secrets.WC_SECRET }}
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+        run: |
+          python local_inventory_feed.py \
+            --refresh-map \
+            --out docs/nova-local-inventory.txt \
+            --min-rows 350 \
+            --report
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- product_map.json docs/nova-local-inventory.txt; then
+            echo "No catalogue or stock changes — nothing to commit."
+          else
+            git add product_map.json docs/nova-local-inventory.txt
+            git commit -m "Refresh product map and feed ($(date -u +%Y-%m-%d))"
+            git pull --rebase --autostash origin main
+            git push
+          fi

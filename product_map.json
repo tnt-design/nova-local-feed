@@ -1,0 +1,2076 @@
+{
+ "generated": "2026-08-17T05:34:34+00:00",
+ "count": 414,
+ "items": [
+  {
+   "id": 1597,
+   "sku": "BR118",
+   "kind": "simple"
+  },
+  {
+   "id": 1778,
+   "sku": "ERG07-14W",
+   "kind": "simple"
+  },
+  {
+   "id": 2136,
+   "sku": "ER73-9R-lg",
+   "kind": "simple"
+  },
+  {
+   "id": 2142,
+   "sku": "ER58-G-Opal",
+   "kind": "simple"
+  },
+  {
+   "id": 2179,
+   "sku": "ER70-Opal",
+   "kind": "simple"
+  },
+  {
+   "id": 2185,
+   "sku": "ER71",
+   "kind": "simple"
+  },
+  {
+   "id": 2192,
+   "sku": "ER73-18Y-lg",
+   "kind": "simple"
+  },
+  {
+   "id": 2220,
+   "sku": "ER86-G",
+   "kind": "simple"
+  },
+  {
+   "id": 2224,
+   "sku": "ER86-sil",
+   "kind": "simple"
+  },
+  {
+   "id": 2228,
+   "sku": "ER91",
+   "kind": "simple"
+  },
+  {
+   "id": 2251,
+   "sku": "ER93",
+   "kind": "simple"
+  },
+  {
+   "id": 2263,
+   "sku": "ER95",
+   "kind": "simple"
+  },
+  {
+   "id": 2275,
+   "sku": "ER102-C.Emerald",
+   "kind": "simple"
+  },
+  {
+   "id": 2282,
+   "sku": "ER102-BlueTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 2286,
+   "sku": "ER102-Garnet",
+   "kind": "simple"
+  },
+  {
+   "id": 2290,
+   "sku": "ER102-WhiteTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 2294,
+   "sku": "ER102-Amethyst",
+   "kind": "simple"
+  },
+  {
+   "id": 2299,
+   "sku": "ER103-Ruby",
+   "kind": "simple"
+  },
+  {
+   "id": 2307,
+   "sku": "ER103-Sapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 2313,
+   "sku": "ER103-PinkSapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 2869,
+   "sku": "PN110",
+   "kind": "simple"
+  },
+  {
+   "id": 2874,
+   "sku": "PN112-sm",
+   "kind": "simple"
+  },
+  {
+   "id": 6969,
+   "sku": "ER111",
+   "kind": "simple"
+  },
+  {
+   "id": 11132,
+   "sku": "PNG191-Y",
+   "kind": "simple"
+  },
+  {
+   "id": 13209,
+   "sku": "GR99-14W-0.50",
+   "kind": "simple"
+  },
+  {
+   "id": 13394,
+   "sku": "ER58-G-Oval-Opal",
+   "kind": "simple"
+  },
+  {
+   "id": 13395,
+   "sku": "ER58-G-Oval-Ruby",
+   "kind": "simple"
+  },
+  {
+   "id": 13400,
+   "sku": "ER63-Opal",
+   "kind": "simple"
+  },
+  {
+   "id": 13401,
+   "sku": "ER67-3-BlueTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 13402,
+   "sku": "ER67-3-C.Emerald",
+   "kind": "simple"
+  },
+  {
+   "id": 13403,
+   "sku": "ER67-3-FancySapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 13404,
+   "sku": "ER67-3-PinkSapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 13405,
+   "sku": "ER67-3-Ruby",
+   "kind": "simple"
+  },
+  {
+   "id": 13406,
+   "sku": "ER67-3-Sapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 13407,
+   "sku": "ER67-3-Y.Sapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 13408,
+   "sku": "ER70-CreatedEmerald",
+   "kind": "simple"
+  },
+  {
+   "id": 13409,
+   "sku": "ER70-lg-Garnet",
+   "kind": "simple"
+  },
+  {
+   "id": 13410,
+   "sku": "ER70-lg-WhiteTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 13411,
+   "sku": "ER70-Ruby",
+   "kind": "simple"
+  },
+  {
+   "id": 13412,
+   "sku": "ER73-sil-lg",
+   "kind": "simple"
+  },
+  {
+   "id": 13418,
+   "sku": "ER95-FancySapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 13419,
+   "sku": "ER97",
+   "kind": "simple"
+  },
+  {
+   "id": 13421,
+   "sku": "ER103-WhiteSapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 13422,
+   "sku": "ER106-BlueTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 13423,
+   "sku": "ER110-BlueTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 13424,
+   "sku": "ER110-Garnet",
+   "kind": "simple"
+  },
+  {
+   "id": 13425,
+   "sku": "ER110-Rhodolite",
+   "kind": "simple"
+  },
+  {
+   "id": 13427,
+   "sku": "ER114",
+   "kind": "simple"
+  },
+  {
+   "id": 13428,
+   "sku": "ER115-B",
+   "kind": "simple"
+  },
+  {
+   "id": 13430,
+   "sku": "ER115-MokumeGane",
+   "kind": "simple"
+  },
+  {
+   "id": 13431,
+   "sku": "ER115-S",
+   "kind": "simple"
+  },
+  {
+   "id": 13432,
+   "sku": "ER118",
+   "kind": "simple"
+  },
+  {
+   "id": 13433,
+   "sku": "ER120",
+   "kind": "simple"
+  },
+  {
+   "id": 13434,
+   "sku": "ER121-lg-Mokume",
+   "kind": "simple"
+  },
+  {
+   "id": 13435,
+   "sku": "ER121-MokumeGane",
+   "kind": "simple"
+  },
+  {
+   "id": 13436,
+   "sku": "ER121-sm-Mokume",
+   "kind": "simple"
+  },
+  {
+   "id": 13438,
+   "sku": "ER124",
+   "kind": "simple"
+  },
+  {
+   "id": 13439,
+   "sku": "ER124-sm",
+   "kind": "simple"
+  },
+  {
+   "id": 13441,
+   "sku": "ER125-BlueTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 13442,
+   "sku": "ER125-CreatedEmerald",
+   "kind": "simple"
+  },
+  {
+   "id": 13443,
+   "sku": "ER125-FancySapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 13444,
+   "sku": "ERG02-14W",
+   "kind": "simple"
+  },
+  {
+   "id": 13445,
+   "sku": "ERG102-14W-1.5mm",
+   "kind": "simple"
+  },
+  {
+   "id": 13446,
+   "sku": "ERG104-R",
+   "kind": "simple"
+  },
+  {
+   "id": 13456,
+   "sku": "GR99-14W-P.Tour",
+   "kind": "simple"
+  },
+  {
+   "id": 13462,
+   "sku": "PNG193",
+   "kind": "simple"
+  },
+  {
+   "id": 14410,
+   "sku": "R282-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14421,
+   "sku": "R278-PinkSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14422,
+   "sku": "R283",
+   "kind": "variation"
+  },
+  {
+   "id": 14423,
+   "sku": "R282-RedSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14424,
+   "sku": "R282-L-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14425,
+   "sku": "R282-CreatedEmerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14426,
+   "sku": "R281-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14427,
+   "sku": "R281-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14428,
+   "sku": "R278-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14429,
+   "sku": "R278-FancySapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14430,
+   "sku": "R218-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14431,
+   "sku": "R218-Rhodolite",
+   "kind": "variation"
+  },
+  {
+   "id": 14432,
+   "sku": "R218-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14433,
+   "sku": "R218-CreatedEmerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14434,
+   "sku": "R218-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14436,
+   "sku": "R212-sil",
+   "kind": "variation"
+  },
+  {
+   "id": 14437,
+   "sku": "R203-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14438,
+   "sku": "R203-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14439,
+   "sku": "R203-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14440,
+   "sku": "R203-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14442,
+   "sku": "R192-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14445,
+   "sku": "R183-sm-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14446,
+   "sku": "R183-sm-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14447,
+   "sku": "R183-sm-C.Emerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14448,
+   "sku": "R183-sm-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14449,
+   "sku": "R109-W.Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14450,
+   "sku": "R96-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14451,
+   "sku": "R96-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14452,
+   "sku": "R70-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14453,
+   "sku": "R70-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 14454,
+   "sku": "R70-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14455,
+   "sku": "R277",
+   "kind": "variation"
+  },
+  {
+   "id": 14456,
+   "sku": "R272-sm-14R-dia",
+   "kind": "variation"
+  },
+  {
+   "id": 14457,
+   "sku": "R264-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14461,
+   "sku": "R232-Prehnite",
+   "kind": "variation"
+  },
+  {
+   "id": 14462,
+   "sku": "R232-Moonstone",
+   "kind": "variation"
+  },
+  {
+   "id": 14463,
+   "sku": "R232-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14464,
+   "sku": "R232-Aquamarine",
+   "kind": "variation"
+  },
+  {
+   "id": 14465,
+   "sku": "R232-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14466,
+   "sku": "R222-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14467,
+   "sku": "R222-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 14468,
+   "sku": "R213-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14469,
+   "sku": "R213-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14470,
+   "sku": "R212-G-Onyx-18Y",
+   "kind": "variation"
+  },
+  {
+   "id": 14472,
+   "sku": "R204-CreatedEmerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14473,
+   "sku": "R204-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14474,
+   "sku": "R201-Opal",
+   "kind": "variation"
+  },
+  {
+   "id": 14476,
+   "sku": "R82-WhiteSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14477,
+   "sku": "R82-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14478,
+   "sku": "R272-sm-14R",
+   "kind": "variation"
+  },
+  {
+   "id": 14479,
+   "sku": "R194-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14480,
+   "sku": "R106-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14481,
+   "sku": "R92-G",
+   "kind": "variation"
+  },
+  {
+   "id": 14482,
+   "sku": "R245-sm-RoseW.-Shiny",
+   "kind": "variation"
+  },
+  {
+   "id": 14483,
+   "sku": "R245-sm-Ebony-Shiny",
+   "kind": "variation"
+  },
+  {
+   "id": 14485,
+   "sku": "R194-sil",
+   "kind": "variation"
+  },
+  {
+   "id": 14486,
+   "sku": "R106-C-Sil",
+   "kind": "variation"
+  },
+  {
+   "id": 14487,
+   "sku": "WS021",
+   "kind": "variation"
+  },
+  {
+   "id": 14488,
+   "sku": "WS002",
+   "kind": "variation"
+  },
+  {
+   "id": 14489,
+   "sku": "GR304",
+   "kind": "variation"
+  },
+  {
+   "id": 14490,
+   "sku": "GR303",
+   "kind": "variation"
+  },
+  {
+   "id": 14491,
+   "sku": "GR301",
+   "kind": "variation"
+  },
+  {
+   "id": 14492,
+   "sku": "GR116",
+   "kind": "variation"
+  },
+  {
+   "id": 14493,
+   "sku": "GR97",
+   "kind": "variation"
+  },
+  {
+   "id": 14494,
+   "sku": "GR96",
+   "kind": "variation"
+  },
+  {
+   "id": 14495,
+   "sku": "GR94-14W-Aquamarine",
+   "kind": "variation"
+  },
+  {
+   "id": 14496,
+   "sku": "GR94",
+   "kind": "variation"
+  },
+  {
+   "id": 14497,
+   "sku": "GR91",
+   "kind": "variation"
+  },
+  {
+   "id": 14498,
+   "sku": "GR83-14Y-B.Topaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14499,
+   "sku": "GR79-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 14500,
+   "sku": "GR39-Tsarvorite",
+   "kind": "variation"
+  },
+  {
+   "id": 14501,
+   "sku": "GR31-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14502,
+   "sku": "GR302-9W",
+   "kind": "variation"
+  },
+  {
+   "id": 14503,
+   "sku": "GR111-14W-0.20",
+   "kind": "variation"
+  },
+  {
+   "id": 14504,
+   "sku": "GR110-18W-0.30",
+   "kind": "variation"
+  },
+  {
+   "id": 14505,
+   "sku": "GR80-14W-0.30",
+   "kind": "variation"
+  },
+  {
+   "id": 14506,
+   "sku": "GR95-18W-0.30",
+   "kind": "variation"
+  },
+  {
+   "id": 14507,
+   "sku": "GR95-sol-18W-0.40",
+   "kind": "variation"
+  },
+  {
+   "id": 14508,
+   "sku": "GR76-14W-0.20",
+   "kind": "variation"
+  },
+  {
+   "id": 14509,
+   "sku": "R204-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14510,
+   "sku": "GR83-18Y-0.40",
+   "kind": "variation"
+  },
+  {
+   "id": 14511,
+   "sku": "GR89-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14512,
+   "sku": "WS009",
+   "kind": "variation"
+  },
+  {
+   "id": 14513,
+   "sku": "WS017.2",
+   "kind": "variation"
+  },
+  {
+   "id": 14514,
+   "sku": "WS017",
+   "kind": "variation"
+  },
+  {
+   "id": 14515,
+   "sku": "GR92",
+   "kind": "variation"
+  },
+  {
+   "id": 14516,
+   "sku": "R253-Dia",
+   "kind": "variation"
+  },
+  {
+   "id": 14517,
+   "sku": "R213-CreatedEmerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14518,
+   "sku": "GR89",
+   "kind": "variation"
+  },
+  {
+   "id": 14519,
+   "sku": "GR83-14R-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14520,
+   "sku": "R245-N-Rosewood",
+   "kind": "variation"
+  },
+  {
+   "id": 14521,
+   "sku": "R92",
+   "kind": "variation"
+  },
+  {
+   "id": 14522,
+   "sku": "R287",
+   "kind": "variation"
+  },
+  {
+   "id": 14523,
+   "sku": "R286-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14524,
+   "sku": "R282-L-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14525,
+   "sku": "R282-L-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 14526,
+   "sku": "R282-L-C.Emerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14527,
+   "sku": "R282-L-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14528,
+   "sku": "R282-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14529,
+   "sku": "R282-PinkSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14530,
+   "sku": "R281-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 14533,
+   "sku": "GR42",
+   "kind": "variation"
+  },
+  {
+   "id": 14534,
+   "sku": "GR60-F",
+   "kind": "variation"
+  },
+  {
+   "id": 14535,
+   "sku": "R238",
+   "kind": "variation"
+  },
+  {
+   "id": 14536,
+   "sku": "R281-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14537,
+   "sku": "R281-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14538,
+   "sku": "R270-M",
+   "kind": "variation"
+  },
+  {
+   "id": 14539,
+   "sku": "R192 Red Sap",
+   "kind": "variation"
+  },
+  {
+   "id": 14540,
+   "sku": "R183-sm-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14541,
+   "sku": "R279",
+   "kind": "variation"
+  },
+  {
+   "id": 14542,
+   "sku": "R94",
+   "kind": "variation"
+  },
+  {
+   "id": 14544,
+   "sku": "R237-C",
+   "kind": "variation"
+  },
+  {
+   "id": 14545,
+   "sku": "R274",
+   "kind": "variation"
+  },
+  {
+   "id": 14546,
+   "sku": "R02-Peridot",
+   "kind": "variation"
+  },
+  {
+   "id": 14547,
+   "sku": "R256",
+   "kind": "variation"
+  },
+  {
+   "id": 14548,
+   "sku": "R272-C",
+   "kind": "variation"
+  },
+  {
+   "id": 14549,
+   "sku": "R263",
+   "kind": "variation"
+  },
+  {
+   "id": 14550,
+   "sku": "GR60-1",
+   "kind": "variation"
+  },
+  {
+   "id": 14551,
+   "sku": "GR60",
+   "kind": "variation"
+  },
+  {
+   "id": 14552,
+   "sku": "GR53-pt-0.30",
+   "kind": "variation"
+  },
+  {
+   "id": 14553,
+   "sku": "GR49",
+   "kind": "variation"
+  },
+  {
+   "id": 14554,
+   "sku": "R203-CreatedEmerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14555,
+   "sku": "R281-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14556,
+   "sku": "R02-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14557,
+   "sku": "R02-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14558,
+   "sku": "R02-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14559,
+   "sku": "R229-sq-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14560,
+   "sku": "R229-sq-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14561,
+   "sku": "R204-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14563,
+   "sku": "R213-Opal",
+   "kind": "variation"
+  },
+  {
+   "id": 14564,
+   "sku": "GR78-Sapphire-Dia",
+   "kind": "variation"
+  },
+  {
+   "id": 14565,
+   "sku": "GR77-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14566,
+   "sku": "GR76-18W-0.30",
+   "kind": "variation"
+  },
+  {
+   "id": 14567,
+   "sku": "GR63",
+   "kind": "variation"
+  },
+  {
+   "id": 14568,
+   "sku": "GR75-2mm",
+   "kind": "variation"
+  },
+  {
+   "id": 14569,
+   "sku": "GR49-Pair",
+   "kind": "variation"
+  },
+  {
+   "id": 14570,
+   "sku": "GR16-rd-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 14571,
+   "sku": "R281-CreatedEmerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14572,
+   "sku": "R196",
+   "kind": "variation"
+  },
+  {
+   "id": 14574,
+   "sku": "R70-FancySapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14575,
+   "sku": "R42-9R-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14576,
+   "sku": "R42-9R",
+   "kind": "variation"
+  },
+  {
+   "id": 14578,
+   "sku": "R285",
+   "kind": "variation"
+  },
+  {
+   "id": 14579,
+   "sku": "R281-Wood",
+   "kind": "variation"
+  },
+  {
+   "id": 14580,
+   "sku": "R247-RoseWood",
+   "kind": "variation"
+  },
+  {
+   "id": 14581,
+   "sku": "R247-EbonyWood",
+   "kind": "variation"
+  },
+  {
+   "id": 14582,
+   "sku": "R246-RoseWood",
+   "kind": "variation"
+  },
+  {
+   "id": 14583,
+   "sku": "R246-EbonyWood",
+   "kind": "variation"
+  },
+  {
+   "id": 14584,
+   "sku": "R245-sm-Ebony-Matte",
+   "kind": "variation"
+  },
+  {
+   "id": 14585,
+   "sku": "R245-sm-RoseW.-Matte",
+   "kind": "variation"
+  },
+  {
+   "id": 14586,
+   "sku": "R245-EbonyWood",
+   "kind": "variation"
+  },
+  {
+   "id": 14587,
+   "sku": "R245-Rosewood",
+   "kind": "variation"
+  },
+  {
+   "id": 14610,
+   "sku": "R263-SQ",
+   "kind": "variation"
+  },
+  {
+   "id": 14611,
+   "sku": "R233",
+   "kind": "variation"
+  },
+  {
+   "id": 14612,
+   "sku": "R213-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14613,
+   "sku": "R210-Opal",
+   "kind": "variation"
+  },
+  {
+   "id": 14614,
+   "sku": "R204-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14615,
+   "sku": "R194",
+   "kind": "variation"
+  },
+  {
+   "id": 14616,
+   "sku": "R187-18Y",
+   "kind": "variation"
+  },
+  {
+   "id": 14617,
+   "sku": "R187-18R",
+   "kind": "variation"
+  },
+  {
+   "id": 14618,
+   "sku": "R42-18Y-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14619,
+   "sku": "R42-18Y",
+   "kind": "variation"
+  },
+  {
+   "id": 14620,
+   "sku": "R42-S",
+   "kind": "variation"
+  },
+  {
+   "id": 14621,
+   "sku": "R264-WhiteSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14622,
+   "sku": "R258-rd",
+   "kind": "variation"
+  },
+  {
+   "id": 14623,
+   "sku": "R254",
+   "kind": "variation"
+  },
+  {
+   "id": 14624,
+   "sku": "R229-sq-C.Emerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14625,
+   "sku": "R199",
+   "kind": "variation"
+  },
+  {
+   "id": 14626,
+   "sku": "R104",
+   "kind": "variation"
+  },
+  {
+   "id": 14627,
+   "sku": "R42-sil-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14628,
+   "sku": "R29",
+   "kind": "variation"
+  },
+  {
+   "id": 14629,
+   "sku": "GR16-rd-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14630,
+   "sku": "GR87-14Y",
+   "kind": "variation"
+  },
+  {
+   "id": 14631,
+   "sku": "BR106",
+   "kind": "variation"
+  },
+  {
+   "id": 14632,
+   "sku": "BR105-EbonyWood",
+   "kind": "variation"
+  },
+  {
+   "id": 14633,
+   "sku": "BR89-RedSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14635,
+   "sku": "BR83-Ebony",
+   "kind": "variation"
+  },
+  {
+   "id": 14636,
+   "sku": "BR81-WhiteSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14637,
+   "sku": "BR81-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14638,
+   "sku": "BR68-sm-EbonyWood",
+   "kind": "variation"
+  },
+  {
+   "id": 14639,
+   "sku": "BR68-lg-EbonyWood",
+   "kind": "variation"
+  },
+  {
+   "id": 14640,
+   "sku": "BR59-RD",
+   "kind": "variation"
+  },
+  {
+   "id": 14643,
+   "sku": "BR101",
+   "kind": "variation"
+  },
+  {
+   "id": 14644,
+   "sku": "BR121-M",
+   "kind": "variation"
+  },
+  {
+   "id": 14645,
+   "sku": "BR121",
+   "kind": "variation"
+  },
+  {
+   "id": 14646,
+   "sku": "BR121-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14647,
+   "sku": "BR65",
+   "kind": "variation"
+  },
+  {
+   "id": 14648,
+   "sku": "BR76",
+   "kind": "variation"
+  },
+  {
+   "id": 14651,
+   "sku": "BR94-sm",
+   "kind": "variation"
+  },
+  {
+   "id": 14653,
+   "sku": "BR89-WhiteSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14654,
+   "sku": "BR88-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14655,
+   "sku": "BR81-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14656,
+   "sku": "BR71-G-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14657,
+   "sku": "BR69-M",
+   "kind": "variation"
+  },
+  {
+   "id": 14659,
+   "sku": "BR64",
+   "kind": "variation"
+  },
+  {
+   "id": 14660,
+   "sku": "BR59",
+   "kind": "variation"
+  },
+  {
+   "id": 14661,
+   "sku": "BR56",
+   "kind": "variation"
+  },
+  {
+   "id": 14662,
+   "sku": "BR54",
+   "kind": "variation"
+  },
+  {
+   "id": 14663,
+   "sku": "BR49",
+   "kind": "variation"
+  },
+  {
+   "id": 14664,
+   "sku": "BR47-Square",
+   "kind": "variation"
+  },
+  {
+   "id": 14665,
+   "sku": "BR47-Oval",
+   "kind": "variation"
+  },
+  {
+   "id": 14666,
+   "sku": "BR105-Rosewood",
+   "kind": "variation"
+  },
+  {
+   "id": 14667,
+   "sku": "BR83-Rosewood",
+   "kind": "variation"
+  },
+  {
+   "id": 14668,
+   "sku": "BR79-Rosewood",
+   "kind": "variation"
+  },
+  {
+   "id": 14669,
+   "sku": "BR79-Ebony",
+   "kind": "variation"
+  },
+  {
+   "id": 14670,
+   "sku": "BR68-sm-Rosewood",
+   "kind": "variation"
+  },
+  {
+   "id": 14671,
+   "sku": "BR68-lg-Rosewood",
+   "kind": "variation"
+  },
+  {
+   "id": 14672,
+   "sku": "BR68-Rosewood",
+   "kind": "variation"
+  },
+  {
+   "id": 14673,
+   "sku": "BR68-Ebony",
+   "kind": "variation"
+  },
+  {
+   "id": 14674,
+   "sku": "PN55-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14675,
+   "sku": "PN215-rd-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14676,
+   "sku": "PN215-rd-Tourmaline",
+   "kind": "variation"
+  },
+  {
+   "id": 14677,
+   "sku": "PN214-rd",
+   "kind": "variation"
+  },
+  {
+   "id": 14678,
+   "sku": "PN214",
+   "kind": "variation"
+  },
+  {
+   "id": 14679,
+   "sku": "PN213-Mokume",
+   "kind": "variation"
+  },
+  {
+   "id": 14680,
+   "sku": "PN210",
+   "kind": "variation"
+  },
+  {
+   "id": 14681,
+   "sku": "PN208-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14682,
+   "sku": "PN206",
+   "kind": "variation"
+  },
+  {
+   "id": 14683,
+   "sku": "PN189-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14684,
+   "sku": "PN189-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14685,
+   "sku": "PN186-Ruby-CZ",
+   "kind": "variation"
+  },
+  {
+   "id": 14686,
+   "sku": "PN185-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14687,
+   "sku": "PN185-H-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14688,
+   "sku": "PN185-H-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14689,
+   "sku": "PN185-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14690,
+   "sku": "PN185-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14691,
+   "sku": "PN180",
+   "kind": "variation"
+  },
+  {
+   "id": 14693,
+   "sku": "PN136-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14694,
+   "sku": "PN136-Rhodolite",
+   "kind": "variation"
+  },
+  {
+   "id": 14695,
+   "sku": "PN136-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14696,
+   "sku": "PN136-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14697,
+   "sku": "PN128-RedSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14698,
+   "sku": "PN121-H",
+   "kind": "variation"
+  },
+  {
+   "id": 14699,
+   "sku": "PN101",
+   "kind": "variation"
+  },
+  {
+   "id": 14702,
+   "sku": "PN91-WhiteSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14703,
+   "sku": "PN60-YellowSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14704,
+   "sku": "PN60-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14705,
+   "sku": "PN60-Tsavorite",
+   "kind": "variation"
+  },
+  {
+   "id": 14706,
+   "sku": "PN60-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14707,
+   "sku": "PN60-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 14708,
+   "sku": "PN60-PinkSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14709,
+   "sku": "PN60-CreatedEmerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14710,
+   "sku": "PN60-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14711,
+   "sku": "PN59-YellowSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14712,
+   "sku": "PN59-C.Emerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14713,
+   "sku": "PN59-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14714,
+   "sku": "PN55-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14715,
+   "sku": "PN54-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14716,
+   "sku": "PN54-Peridot",
+   "kind": "variation"
+  },
+  {
+   "id": 14717,
+   "sku": "PN116",
+   "kind": "variation"
+  },
+  {
+   "id": 14720,
+   "sku": "PN211",
+   "kind": "variation"
+  },
+  {
+   "id": 14721,
+   "sku": "PN169",
+   "kind": "variation"
+  },
+  {
+   "id": 14722,
+   "sku": "ST020-IV",
+   "kind": "variation"
+  },
+  {
+   "id": 14723,
+   "sku": "PN177",
+   "kind": "variation"
+  },
+  {
+   "id": 14724,
+   "sku": "PN186-PinkSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14726,
+   "sku": "PN192",
+   "kind": "variation"
+  },
+  {
+   "id": 14727,
+   "sku": "PN193",
+   "kind": "variation"
+  },
+  {
+   "id": 14728,
+   "sku": "PN176",
+   "kind": "variation"
+  },
+  {
+   "id": 14732,
+   "sku": "PN100",
+   "kind": "variation"
+  },
+  {
+   "id": 14733,
+   "sku": "PN83-lg",
+   "kind": "variation"
+  },
+  {
+   "id": 14734,
+   "sku": "PN71",
+   "kind": "variation"
+  },
+  {
+   "id": 14735,
+   "sku": "PN51-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14742,
+   "sku": "PN59-PinkSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14743,
+   "sku": "PN59-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14744,
+   "sku": "PN59-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14745,
+   "sku": "PN56",
+   "kind": "variation"
+  },
+  {
+   "id": 14746,
+   "sku": "PN55-WhiteTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14747,
+   "sku": "PN55-C.Emerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14748,
+   "sku": "PN55-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14749,
+   "sku": "PN185-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14750,
+   "sku": "PN91-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 14751,
+   "sku": "PN91-P.Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14752,
+   "sku": "PN136-Amethyst",
+   "kind": "variation"
+  },
+  {
+   "id": 14753,
+   "sku": "PN136-C.Emerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14754,
+   "sku": "PN54-C.Emerald",
+   "kind": "variation"
+  },
+  {
+   "id": 14755,
+   "sku": "PN54-Garnet",
+   "kind": "variation"
+  },
+  {
+   "id": 14756,
+   "sku": "PN54-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14757,
+   "sku": "PN49",
+   "kind": "variation"
+  },
+  {
+   "id": 14758,
+   "sku": "PN51-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 14759,
+   "sku": "PN121-rd",
+   "kind": "variation"
+  },
+  {
+   "id": 14760,
+   "sku": "PN128-WhiteSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14761,
+   "sku": "PN131",
+   "kind": "variation"
+  },
+  {
+   "id": 14762,
+   "sku": "PN140",
+   "kind": "variation"
+  },
+  {
+   "id": 14763,
+   "sku": "PN187-18Y",
+   "kind": "variation"
+  },
+  {
+   "id": 14764,
+   "sku": "PN91-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 14765,
+   "sku": "PN167",
+   "kind": "variation"
+  },
+  {
+   "id": 14766,
+   "sku": "PN156-9k",
+   "kind": "variation"
+  },
+  {
+   "id": 14767,
+   "sku": "PN84",
+   "kind": "variation"
+  },
+  {
+   "id": 14768,
+   "sku": "PN69-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14769,
+   "sku": "PN185-Peridot",
+   "kind": "variation"
+  },
+  {
+   "id": 14770,
+   "sku": "PN83-rd",
+   "kind": "variation"
+  },
+  {
+   "id": 14771,
+   "sku": "PN181",
+   "kind": "variation"
+  },
+  {
+   "id": 14772,
+   "sku": "PN178",
+   "kind": "variation"
+  },
+  {
+   "id": 14773,
+   "sku": "PN166",
+   "kind": "variation"
+  },
+  {
+   "id": 14774,
+   "sku": "PN158",
+   "kind": "variation"
+  },
+  {
+   "id": 14775,
+   "sku": "PN125",
+   "kind": "variation"
+  },
+  {
+   "id": 14776,
+   "sku": "PN66-Wood",
+   "kind": "variation"
+  },
+  {
+   "id": 14779,
+   "sku": "PN152",
+   "kind": "variation"
+  },
+  {
+   "id": 14807,
+   "sku": "PNG192",
+   "kind": "variation"
+  },
+  {
+   "id": 16308,
+   "sku": "R282-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 16342,
+   "sku": "GR305-14Y-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 16587,
+   "sku": "R278-RedSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 17104,
+   "sku": "PN131N",
+   "kind": "simple"
+  },
+  {
+   "id": 17108,
+   "sku": "R301-WhiteSap",
+   "kind": "variation"
+  },
+  {
+   "id": 17111,
+   "sku": "ER125-Ruby",
+   "kind": "simple"
+  },
+  {
+   "id": 17117,
+   "sku": "BR81 Rhodo",
+   "kind": "simple"
+  },
+  {
+   "id": 17122,
+   "sku": "WS022.2",
+   "kind": "variation"
+  },
+  {
+   "id": 17125,
+   "sku": "ER127-BlueTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 17127,
+   "sku": "ER127-C.Emerald",
+   "kind": "simple"
+  },
+  {
+   "id": 17130,
+   "sku": "WS022",
+   "kind": "variation"
+  },
+  {
+   "id": 17132,
+   "sku": "ERG104-W",
+   "kind": "simple"
+  },
+  {
+   "id": 17134,
+   "sku": "ER70-lg-BlueTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 17136,
+   "sku": "ER126-C.Emerald",
+   "kind": "simple"
+  },
+  {
+   "id": 17139,
+   "sku": "PN215-tri-Amethyst",
+   "kind": "simple"
+  },
+  {
+   "id": 17141,
+   "sku": "R191-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 17144,
+   "sku": "LD002",
+   "kind": "simple"
+  },
+  {
+   "id": 17146,
+   "sku": "ER106-WhiteTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 17148,
+   "sku": "ER128",
+   "kind": "simple"
+  },
+  {
+   "id": 17151,
+   "sku": "ER63 Garnet",
+   "kind": "simple"
+  },
+  {
+   "id": 17156,
+   "sku": "R229 rd White Topaz",
+   "kind": "variation"
+  },
+  {
+   "id": 17158,
+   "sku": "PN69-WhiteTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 17160,
+   "sku": "GR74-14kW-0.30",
+   "kind": "variation"
+  },
+  {
+   "id": 17162,
+   "sku": "R282-L-PinkSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 17164,
+   "sku": "R282-L-FancySapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 17166,
+   "sku": "R260N",
+   "kind": "variation"
+  },
+  {
+   "id": 17170,
+   "sku": "R302-Sap-White Sap",
+   "kind": "variation"
+  },
+  {
+   "id": 17172,
+   "sku": "ER127-Iolite",
+   "kind": "simple"
+  },
+  {
+   "id": 17176,
+   "sku": "R191-RedSap",
+   "kind": "variation"
+  },
+  {
+   "id": 17179,
+   "sku": "GR95SOL Platinum-0.40ct",
+   "kind": "simple"
+  },
+  {
+   "id": 17181,
+   "sku": "ER63N",
+   "kind": "simple"
+  },
+  {
+   "id": 17184,
+   "sku": "R82 Red Sap",
+   "kind": "variation"
+  },
+  {
+   "id": 17188,
+   "sku": "WS017 sm 18k",
+   "kind": "simple"
+  },
+  {
+   "id": 17190,
+   "sku": "PN215-tri-Rhodolite",
+   "kind": "simple"
+  },
+  {
+   "id": 17194,
+   "sku": "GR97-lg-Sapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 17199,
+   "sku": "GR307",
+   "kind": "variation"
+  },
+  {
+   "id": 17202,
+   "sku": "ER126-BlueTopaz",
+   "kind": "simple"
+  },
+  {
+   "id": 17205,
+   "sku": "R289",
+   "kind": "variation"
+  },
+  {
+   "id": 17208,
+   "sku": "R264 red sap",
+   "kind": "variation"
+  },
+  {
+   "id": 17212,
+   "sku": "R229 rd Garnet",
+   "kind": "simple"
+  },
+  {
+   "id": 17215,
+   "sku": "BR122-C.Em-W.Topaz",
+   "kind": "variation"
+  },
+  {
+   "id": 17218,
+   "sku": "GR97-lg-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 17220,
+   "sku": "ERG105-14Y-Opal",
+   "kind": "simple"
+  },
+  {
+   "id": 17223,
+   "sku": "BR81 Created Emerald",
+   "kind": "variation"
+  },
+  {
+   "id": 17225,
+   "sku": "ER126-Amethyst",
+   "kind": "simple"
+  },
+  {
+   "id": 17228,
+   "sku": "GR82N-14kY",
+   "kind": "variation"
+  },
+  {
+   "id": 17277,
+   "sku": "GR109",
+   "kind": "variation"
+  },
+  {
+   "id": 17278,
+   "sku": "GR86",
+   "kind": "variation"
+  },
+  {
+   "id": 17279,
+   "sku": "GR109",
+   "kind": "variation"
+  }
+ ]
+}
