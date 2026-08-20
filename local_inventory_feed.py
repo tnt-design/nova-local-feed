@@ -266,7 +266,11 @@ def refresh_product_map(wc_auth, verbose=True):
                           "kind": "variation"})
         time.sleep(REFRESH_DELAY)
 
-    return items, skipped
+    # Sort by id so the crawl path and the cached-map path emit rows in the
+    # SAME order. Without this the weekly refresh writes crawl order and the
+    # next daily run rewrites identical data in sorted order — a 476-line
+    # no-op diff twice a week that makes the history look like stock churn.
+    return sorted(items, key=lambda x: x["id"]), skipped
 
 
 def save_product_map(items, path):
