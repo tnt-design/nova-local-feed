@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-17T05:47:00+00:00",
- "count": 414,
+ "generated": "2026-09-06T19:10:42+00:00",
+ "count": 412,
  "items": [
   {
    "id": 1597,
@@ -138,11 +138,6 @@
    "kind": "simple"
   },
   {
-   "id": 13400,
-   "sku": "ER63-Opal",
-   "kind": "simple"
-  },
-  {
    "id": 13401,
    "sku": "ER67-3-BlueTopaz",
    "kind": "simple"
@@ -265,11 +260,6 @@
   {
    "id": 13433,
    "sku": "ER120",
-   "kind": "simple"
-  },
-  {
-   "id": 13434,
-   "sku": "ER121-lg-Mokume",
    "kind": "simple"
   },
   {
@@ -1428,11 +1418,6 @@
    "kind": "variation"
   },
   {
-   "id": 14684,
-   "sku": "PN189-BlueTopaz",
-   "kind": "variation"
-  },
-  {
    "id": 14685,
    "sku": "PN186-Ruby-CZ",
    "kind": "variation"
@@ -2071,6 +2056,11 @@
    "id": 17279,
    "sku": "GR109",
    "kind": "variation"
+  },
+  {
+   "id": 17570,
+   "sku": "R229-sq-Garnet",
+   "kind": "simple"
   }
  ]
 }
