@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-13T19:23:47+00:00",
- "count": 386,
+ "generated": "2026-09-27T20:08:34+00:00",
+ "count": 402,
  "items": [
   {
    "id": 1778,
@@ -43,13 +43,13 @@
    "kind": "simple"
   },
   {
-   "id": 2251,
-   "sku": "ER93",
+   "id": 2228,
+   "sku": "ER91",
    "kind": "simple"
   },
   {
-   "id": 2263,
-   "sku": "ER95",
+   "id": 2251,
+   "sku": "ER93",
    "kind": "simple"
   },
   {
@@ -185,11 +185,6 @@
   {
    "id": 13412,
    "sku": "ER73-sil-lg",
-   "kind": "simple"
-  },
-  {
-   "id": 13418,
-   "sku": "ER95-FancySapphire",
    "kind": "simple"
   },
   {
@@ -438,6 +433,11 @@
    "kind": "variation"
   },
   {
+   "id": 14449,
+   "sku": "R109-W.Sapphire",
+   "kind": "variation"
+  },
+  {
    "id": 14450,
    "sku": "R96-Garnet",
    "kind": "variation"
@@ -460,6 +460,11 @@
   {
    "id": 14454,
    "sku": "R70-BlueTopaz",
+   "kind": "variation"
+  },
+  {
+   "id": 14455,
+   "sku": "R277",
    "kind": "variation"
   },
   {
@@ -565,6 +570,11 @@
   {
    "id": 14485,
    "sku": "R194-sil",
+   "kind": "variation"
+  },
+  {
+   "id": 14486,
+   "sku": "R106-C-Sil",
    "kind": "variation"
   },
   {
@@ -713,6 +723,11 @@
    "kind": "variation"
   },
   {
+   "id": 14516,
+   "sku": "R253-Dia",
+   "kind": "variation"
+  },
+  {
    "id": 14517,
    "sku": "R213-CreatedEmerald",
    "kind": "variation"
@@ -823,6 +838,16 @@
    "kind": "variation"
   },
   {
+   "id": 14541,
+   "sku": "R279",
+   "kind": "variation"
+  },
+  {
+   "id": 14542,
+   "sku": "R94",
+   "kind": "variation"
+  },
+  {
    "id": 14544,
    "sku": "R237-C",
    "kind": "variation"
@@ -840,6 +865,11 @@
   {
    "id": 14548,
    "sku": "R272-C",
+   "kind": "variation"
+  },
+  {
+   "id": 14549,
+   "sku": "R263",
    "kind": "variation"
   },
   {
@@ -1018,6 +1048,16 @@
    "kind": "variation"
   },
   {
+   "id": 14610,
+   "sku": "R263-SQ",
+   "kind": "variation"
+  },
+  {
+   "id": 14611,
+   "sku": "R233",
+   "kind": "variation"
+  },
+  {
    "id": 14612,
    "sku": "R213-Amethyst",
    "kind": "variation"
@@ -1070,11 +1110,6 @@
   {
    "id": 14622,
    "sku": "R258-rd",
-   "kind": "variation"
-  },
-  {
-   "id": 14623,
-   "sku": "R254",
    "kind": "variation"
   },
   {
@@ -1153,6 +1188,16 @@
    "kind": "variation"
   },
   {
+   "id": 14640,
+   "sku": "BR59-RD",
+   "kind": "variation"
+  },
+  {
+   "id": 14641,
+   "sku": "BR54-sm",
+   "kind": "variation"
+  },
+  {
    "id": 14643,
    "sku": "BR101",
    "kind": "variation"
@@ -1213,8 +1258,38 @@
    "kind": "variation"
   },
   {
+   "id": 14659,
+   "sku": "BR64",
+   "kind": "variation"
+  },
+  {
+   "id": 14660,
+   "sku": "BR59",
+   "kind": "variation"
+  },
+  {
+   "id": 14661,
+   "sku": "BR56",
+   "kind": "variation"
+  },
+  {
+   "id": 14662,
+   "sku": "BR54",
+   "kind": "variation"
+  },
+  {
    "id": 14663,
    "sku": "BR49",
+   "kind": "variation"
+  },
+  {
+   "id": 14664,
+   "sku": "BR47-Square",
+   "kind": "variation"
+  },
+  {
+   "id": 14665,
+   "sku": "BR47-Oval",
    "kind": "variation"
   },
   {
@@ -1810,6 +1885,11 @@
   {
    "id": 17166,
    "sku": "R260N",
+   "kind": "variation"
+  },
+  {
+   "id": 17170,
+   "sku": "R302-Sap-White Sap",
    "kind": "variation"
   },
   {
