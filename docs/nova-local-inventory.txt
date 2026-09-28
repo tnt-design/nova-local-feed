@@ -119,7 +119,7 @@ gla_14488	Nova Collection Thapae	in stock
 gla_14489	Nova Collection Thapae	in stock
 gla_14490	Nova Collection Thapae	in stock
 gla_14491	Nova Collection Thapae	in stock
-gla_14492	Nova Collection Thapae	in stock
+gla_14492	Nova Collection Thapae	out of stock
 gla_14493	Nova Collection Thapae	in stock
 gla_14494	Nova Collection Thapae	in stock
 gla_14495	Nova Collection Thapae	out of stock
