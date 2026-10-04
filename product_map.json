@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-27T20:08:34+00:00",
- "count": 402,
+ "generated": "2026-10-04T20:12:14+00:00",
+ "count": 393,
  "items": [
   {
    "id": 1778,
@@ -190,6 +190,11 @@
   {
    "id": 13419,
    "sku": "ER97",
+   "kind": "simple"
+  },
+  {
+   "id": 13420,
+   "sku": "ER102-Rhodolite",
    "kind": "simple"
   },
   {
@@ -433,11 +438,6 @@
    "kind": "variation"
   },
   {
-   "id": 14449,
-   "sku": "R109-W.Sapphire",
-   "kind": "variation"
-  },
-  {
    "id": 14450,
    "sku": "R96-Garnet",
    "kind": "variation"
@@ -523,11 +523,6 @@
    "kind": "variation"
   },
   {
-   "id": 14470,
-   "sku": "R212-G-Onyx-18Y",
-   "kind": "variation"
-  },
-  {
    "id": 14472,
    "sku": "R204-CreatedEmerald",
    "kind": "variation"
@@ -603,11 +598,6 @@
    "kind": "variation"
   },
   {
-   "id": 14492,
-   "sku": "GR116",
-   "kind": "variation"
-  },
-  {
    "id": 14493,
    "sku": "GR97",
    "kind": "variation"
@@ -635,11 +625,6 @@
   {
    "id": 14498,
    "sku": "GR83-14Y-B.Topaz",
-   "kind": "variation"
-  },
-  {
-   "id": 14499,
-   "sku": "GR79-Ruby",
    "kind": "variation"
   },
   {
@@ -720,11 +705,6 @@
   {
    "id": 14515,
    "sku": "GR92",
-   "kind": "variation"
-  },
-  {
-   "id": 14516,
-   "sku": "R253-Dia",
    "kind": "variation"
   },
   {
@@ -865,11 +845,6 @@
   {
    "id": 14548,
    "sku": "R272-C",
-   "kind": "variation"
-  },
-  {
-   "id": 14549,
-   "sku": "R263",
    "kind": "variation"
   },
   {
@@ -1048,16 +1023,6 @@
    "kind": "variation"
   },
   {
-   "id": 14610,
-   "sku": "R263-SQ",
-   "kind": "variation"
-  },
-  {
-   "id": 14611,
-   "sku": "R233",
-   "kind": "variation"
-  },
-  {
    "id": 14612,
    "sku": "R213-Amethyst",
    "kind": "variation"
@@ -1228,11 +1193,6 @@
    "kind": "variation"
   },
   {
-   "id": 14651,
-   "sku": "BR94-sm",
-   "kind": "variation"
-  },
-  {
    "id": 14653,
    "sku": "BR89-WhiteSapphire",
    "kind": "variation"
@@ -1245,11 +1205,6 @@
   {
    "id": 14655,
    "sku": "BR81-BlueTopaz",
-   "kind": "variation"
-  },
-  {
-   "id": 14656,
-   "sku": "BR71-G-BlueTopaz",
    "kind": "variation"
   },
   {
@@ -1435,11 +1390,6 @@
   {
    "id": 14698,
    "sku": "PN121-H",
-   "kind": "variation"
-  },
-  {
-   "id": 14699,
-   "sku": "PN101",
    "kind": "variation"
   },
   {
@@ -1904,7 +1854,7 @@
   },
   {
    "id": 17179,
-   "sku": "GR95SOL Platinum-0.40ct",
+   "sku": "GR95-SOL-Pt-0.40ct",
    "kind": "simple"
   },
   {
@@ -1919,7 +1869,7 @@
   },
   {
    "id": 17188,
-   "sku": "WS017 sm 18k",
+   "sku": "WS017-sm -18k",
    "kind": "simple"
   },
   {
@@ -2011,6 +1961,11 @@
    "id": 17619,
    "sku": "GR302",
    "kind": "simple"
+  },
+  {
+   "id": 17744,
+   "sku": "GR87-14kY-Ruby",
+   "kind": "variation"
   }
  ]
 }
