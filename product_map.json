@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-04T20:12:14+00:00",
- "count": 393,
+ "generated": "2026-10-25T19:37:38+00:00",
+ "count": 385,
  "items": [
   {
    "id": 1778,
@@ -40,11 +40,6 @@
   {
    "id": 2224,
    "sku": "ER86-sil",
-   "kind": "simple"
-  },
-  {
-   "id": 2228,
-   "sku": "ER91",
    "kind": "simple"
   },
   {
@@ -120,11 +115,6 @@
   {
    "id": 13394,
    "sku": "ER58-G-Oval-Opal",
-   "kind": "simple"
-  },
-  {
-   "id": 13395,
-   "sku": "ER58-G-Oval-Ruby",
    "kind": "simple"
   },
   {
@@ -568,11 +558,6 @@
    "kind": "variation"
   },
   {
-   "id": 14486,
-   "sku": "R106-C-Sil",
-   "kind": "variation"
-  },
-  {
    "id": 14487,
    "sku": "WS021",
    "kind": "variation"
@@ -818,16 +803,6 @@
    "kind": "variation"
   },
   {
-   "id": 14541,
-   "sku": "R279",
-   "kind": "variation"
-  },
-  {
-   "id": 14542,
-   "sku": "R94",
-   "kind": "variation"
-  },
-  {
    "id": 14544,
    "sku": "R237-C",
    "kind": "variation"
@@ -940,11 +915,6 @@
   {
    "id": 14569,
    "sku": "GR49-Pair",
-   "kind": "variation"
-  },
-  {
-   "id": 14570,
-   "sku": "GR16-rd-Ruby",
    "kind": "variation"
   },
   {
@@ -1153,16 +1123,6 @@
    "kind": "variation"
   },
   {
-   "id": 14640,
-   "sku": "BR59-RD",
-   "kind": "variation"
-  },
-  {
-   "id": 14641,
-   "sku": "BR54-sm",
-   "kind": "variation"
-  },
-  {
    "id": 14643,
    "sku": "BR101",
    "kind": "variation"
@@ -1218,33 +1178,8 @@
    "kind": "variation"
   },
   {
-   "id": 14660,
-   "sku": "BR59",
-   "kind": "variation"
-  },
-  {
-   "id": 14661,
-   "sku": "BR56",
-   "kind": "variation"
-  },
-  {
-   "id": 14662,
-   "sku": "BR54",
-   "kind": "variation"
-  },
-  {
    "id": 14663,
    "sku": "BR49",
-   "kind": "variation"
-  },
-  {
-   "id": 14664,
-   "sku": "BR47-Square",
-   "kind": "variation"
-  },
-  {
-   "id": 14665,
-   "sku": "BR47-Oval",
    "kind": "variation"
   },
   {
@@ -1460,11 +1395,6 @@
   {
    "id": 14715,
    "sku": "PN54-WhiteTopaz",
-   "kind": "variation"
-  },
-  {
-   "id": 14716,
-   "sku": "PN54-Peridot",
    "kind": "variation"
   },
   {
@@ -1788,6 +1718,11 @@
    "kind": "variation"
   },
   {
+   "id": 17142,
+   "sku": "ER131",
+   "kind": "simple"
+  },
+  {
    "id": 17144,
    "sku": "LD002",
    "kind": "simple"
@@ -1908,11 +1843,6 @@
    "kind": "simple"
   },
   {
-   "id": 17215,
-   "sku": "BR122-C.Em-W.Topaz",
-   "kind": "variation"
-  },
-  {
    "id": 17218,
    "sku": "GR97-lg-Ruby",
    "kind": "variation"
@@ -1953,6 +1883,16 @@
    "kind": "simple"
   },
   {
+   "id": 17593,
+   "sku": "ER128-lg",
+   "kind": "simple"
+  },
+  {
+   "id": 17613,
+   "sku": "LD009",
+   "kind": "simple"
+  },
+  {
    "id": 17615,
    "sku": "GR86-PT",
    "kind": "simple"
@@ -1965,6 +1905,26 @@
   {
    "id": 17744,
    "sku": "GR87-14kY-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 17746,
+   "sku": "GR307-Ruby",
+   "kind": "variation"
+  },
+  {
+   "id": 17776,
+   "sku": "R282-L-RedSapphire",
+   "kind": "variation"
+  },
+  {
+   "id": 17777,
+   "sku": "ER125-Red-Sapphire",
+   "kind": "simple"
+  },
+  {
+   "id": 17779,
+   "sku": "GR308",
    "kind": "variation"
   }
  ]
