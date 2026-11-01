@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-25T19:37:38+00:00",
- "count": 385,
+ "generated": "2026-11-01T21:09:42+00:00",
+ "count": 384,
  "items": [
   {
    "id": 1778,
@@ -243,13 +243,13 @@
    "kind": "simple"
   },
   {
-   "id": 13435,
-   "sku": "ER121-MokumeGane",
+   "id": 13436,
+   "sku": "ER121-sm-Mokume",
    "kind": "simple"
   },
   {
-   "id": 13436,
-   "sku": "ER121-sm-Mokume",
+   "id": 13437,
+   "sku": "ER122-Opal",
    "kind": "simple"
   },
   {
@@ -583,6 +583,11 @@
    "kind": "variation"
   },
   {
+   "id": 14492,
+   "sku": "GR116",
+   "kind": "variation"
+  },
+  {
    "id": 14493,
    "sku": "GR97",
    "kind": "variation"
@@ -590,11 +595,6 @@
   {
    "id": 14494,
    "sku": "GR96",
-   "kind": "variation"
-  },
-  {
-   "id": 14495,
-   "sku": "GR94-14W-Aquamarine",
    "kind": "variation"
   },
   {
@@ -629,7 +629,7 @@
   },
   {
    "id": 14503,
-   "sku": "GR111-14W-0.20",
+   "sku": "GR111-18W-0.20",
    "kind": "variation"
   },
   {
@@ -890,11 +890,6 @@
   {
    "id": 14564,
    "sku": "GR78-Sapphire-Dia",
-   "kind": "variation"
-  },
-  {
-   "id": 14565,
-   "sku": "GR77-sm",
    "kind": "variation"
   },
   {
@@ -1548,11 +1543,6 @@
    "kind": "variation"
   },
   {
-   "id": 14761,
-   "sku": "PN131",
-   "kind": "variation"
-  },
-  {
    "id": 14762,
    "sku": "PN140",
    "kind": "variation"
@@ -1846,6 +1836,11 @@
    "id": 17218,
    "sku": "GR97-lg-Ruby",
    "kind": "variation"
+  },
+  {
+   "id": 17220,
+   "sku": "ERG105-14Y-Opal",
+   "kind": "simple"
   },
   {
    "id": 17223,
