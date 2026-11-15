@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-08T21:08:45+00:00",
- "count": 384,
+ "generated": "2026-11-15T21:44:24+00:00",
+ "count": 387,
  "items": [
   {
    "id": 1778,
@@ -543,23 +543,8 @@
    "kind": "variation"
   },
   {
-   "id": 14482,
-   "sku": "R245-sm-RoseW.-Shiny",
-   "kind": "variation"
-  },
-  {
-   "id": 14483,
-   "sku": "R245-sm-Ebony-Shiny",
-   "kind": "variation"
-  },
-  {
    "id": 14485,
    "sku": "R194-sil",
-   "kind": "variation"
-  },
-  {
-   "id": 14487,
-   "sku": "WS021",
    "kind": "variation"
   },
   {
@@ -595,6 +580,11 @@
   {
    "id": 14494,
    "sku": "GR96",
+   "kind": "variation"
+  },
+  {
+   "id": 14495,
+   "sku": "GR94-14W-Aquamarine",
    "kind": "variation"
   },
   {
@@ -803,11 +793,6 @@
    "kind": "variation"
   },
   {
-   "id": 14544,
-   "sku": "R237-C",
-   "kind": "variation"
-  },
-  {
    "id": 14545,
    "sku": "R274",
    "kind": "variation"
@@ -905,11 +890,6 @@
   {
    "id": 14568,
    "sku": "GR75-2mm",
-   "kind": "variation"
-  },
-  {
-   "id": 14569,
-   "sku": "GR49-Pair",
    "kind": "variation"
   },
   {
@@ -1643,6 +1623,11 @@
    "kind": "variation"
   },
   {
+   "id": 17102,
+   "sku": "ER110-C.Emerald",
+   "kind": "simple"
+  },
+  {
    "id": 17104,
    "sku": "PN131N",
    "kind": "simple"
@@ -1666,6 +1651,11 @@
    "id": 17122,
    "sku": "WS022.2",
    "kind": "variation"
+  },
+  {
+   "id": 17123,
+   "sku": "ER125-Pink-Sapphire",
+   "kind": "simple"
   },
   {
    "id": 17125,
@@ -1793,6 +1783,11 @@
    "kind": "variation"
   },
   {
+   "id": 17185,
+   "sku": "ER125-Sapphire",
+   "kind": "simple"
+  },
+  {
    "id": 17188,
    "sku": "WS017-sm -18k",
    "kind": "simple"
@@ -1878,8 +1873,23 @@
    "kind": "simple"
   },
   {
+   "id": 17590,
+   "sku": "ER126-W.Topaz",
+   "kind": "simple"
+  },
+  {
+   "id": 17592,
+   "sku": "ER110-WhiteTopaz",
+   "kind": "simple"
+  },
+  {
    "id": 17593,
    "sku": "ER128-lg",
+   "kind": "simple"
+  },
+  {
+   "id": 17594,
+   "sku": "ER130-WhiteTopaz",
    "kind": "simple"
   },
   {
@@ -1920,6 +1930,11 @@
   {
    "id": 17779,
    "sku": "GR308",
+   "kind": "variation"
+  },
+  {
+   "id": 18134,
+   "sku": "GR309-14W-Aquamarine",
    "kind": "variation"
   }
  ]
